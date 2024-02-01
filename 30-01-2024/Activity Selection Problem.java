@@ -9,7 +9,7 @@ class Job{
 }
 class sortObj implements Comparator<Job>{
     public int compare(Job j1,Job j2){
-        return j2.b-j1.b;
+        return j1.b-j2.b;
     }
 }
 public class MyClass {
@@ -24,7 +24,7 @@ public class MyClass {
         Job last=a.get(0);
         for(int i=1;i<a.size();i++){
             current=a.get(i);
-            if(current.b>last.a){
+            if(current.b>=last.a){
                 last=current;
                 count++;
             }
