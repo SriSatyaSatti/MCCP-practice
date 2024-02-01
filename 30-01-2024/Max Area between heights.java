@@ -9,11 +9,11 @@ public class MyClass {
 		}
 		int i=0,j=n-1,max=0;
 		while(i<j) {
+			max=Math.max(Math.min(m[i],m[j])*(j-i),max);
 			if(m[i]<m[j])
 		    	i++;
 			else
 				j--;
-			max=Math.max(Math.min(m[i],m[j])*(j-i),max);
 		}
 		System.out.println(max);
 	}
