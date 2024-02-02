@@ -1,13 +1,10 @@
 import java.util.*;
-public class Deltoday {
+public class MyClass{
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
-		System.out.println("length");
 		int n=sc.nextInt();
-		System.out.println("k");
 		int k=sc.nextInt();
 		int[] a=new int[n];
-		System.out.println("array");
 		PriorityQueue<Integer>p=new PriorityQueue<>();
 		for(int i=0;i<n;i++) {
 			a[i]=sc.nextInt();
