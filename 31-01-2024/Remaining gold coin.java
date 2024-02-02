@@ -1,13 +1,10 @@
-public class Deltoday {
-
+import java.util.*;
+public class MyClass{
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner sc=new Scanner(System.in);
 		PriorityQueue<Integer>p=new PriorityQueue<>(Collections.reverseOrder());
-		System.out.println("length");
 		int n=sc.nextInt();
 		int[] a=new int[n];
-		System.out.println("array");
 		for(int i=0;i<n;i++) {
 			a[i]=sc.nextInt();
 			p.add(a[i]);
@@ -17,9 +14,8 @@ public class Deltoday {
 			m1=p.poll();
 			m2=p.poll();
 			if(m1!=m1)
-				p.add(Math.abs(m1-m1));
+			p.add(Math.abs(m1-m2));
 		}
 		System.out.println(p.peek());
 	}
-
 }
