@@ -10,7 +10,7 @@ public class MyClass {
 		}
 		Arrays.sort(a,(x,y) -> y[1]-x[1]);
 		int u=0,i=0;
-		while(T!=0) {
+		while(T!=0  && i<a.length) {
 			int min=Math.min(a[i][0], T);
 			u=u+a[i++][1]*min;
 			T=T-min;
