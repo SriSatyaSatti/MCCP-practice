@@ -13,31 +13,30 @@ public class MyClass{
 		int[] c=new int[n3];
 		System.out.println("array");
 		for(int i=0;i<n1;i++) {
-			a[i]=sc.nextInt();
+			S1[i]=sc.nextInt();
 		}
 		System.out.println("array");
 		for(int i=0;i<n2;i++) {
-			b[i]=sc.nextInt();
+			S2[i]=sc.nextInt();
 		}
 		System.out.println("array");
 		for(int i=0;i<n3;i++) {
-			c[i]=sc.nextInt();
+			S3[i]=sc.nextInt();
 		}
-		int s1=0,s2=0,s3=0;
-		s1=sum(a);s2=sum(b);s3=sum(c);
-		int i=0,k=0,j=0;
-		while(s1!=s2 || s2!=s3) {
-			if(s1>s2 && s1>s3) {
-				s1-=a[i++];
-			}
-			else if(s2>s1 && s2>s3) {
-				s2-=b[j++];
-			}
-			else {
-				s3-=c[k++];
-			}
-		}
-		System.out.println(s1);
+        int a = 0; 
+        int b = 0; 
+        int c = 0; 
+        for (int i: S1) a += i;
+        for (int i: S2) b += i;
+        for (int i: S3) c += i;
+        
+        int i = 0, j = 0, k = 0;
+        while (a != b || b !=c || c!=a) {
+            if (a > b || a > c) a -= S1[i++];
+            if (b > c || b > a) b -= S2[j++];
+            if (c > a || c > b) c -= S3[k++];
+        }
+		System.out.println(a);
 	}
 	private static int sum(int[] a) {
 		int s=0;
