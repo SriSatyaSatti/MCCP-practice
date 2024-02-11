@@ -16,6 +16,25 @@ public class MyClass {
         }
         return dp[m][n];
     }
+    static String LCS(String s1,String s2,int m,int n){
+        String res="";
+        int dp[][]=new int[m][n];
+        dp=fun(s1,s2,m,n);
+        int i=m,j=n;
+        while(i!=0 && j!=0){
+            char c1=s1.CharAt(i-1);
+            char c2=s2.charAt(j-1);
+            if(c1==c2){
+                res=c1+res;
+                i--;
+                j--;
+            }else if(dp[i-1][j]>dp[i][j-1])
+                i--;
+            else
+                j--;
+        }
+        return res;
+    }
     public static void main(String args[]) {
         Scanner sc=new Scanner(System.in);
         String s1=sc.nextLine();
