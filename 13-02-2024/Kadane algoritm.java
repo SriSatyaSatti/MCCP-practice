@@ -3,7 +3,7 @@ public class MyClass {
     static int operations(int a[],int n){
         int max=a[0];
         int cmax=a[0];
-        for(int i=0;i<n;i++){
+        for(int i=1;i<n;i++){
             cmax=Math.max(a[i],cmax+a[i]);
             max=Math.max(cmax,max);
         }
