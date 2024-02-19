@@ -1,6 +1,6 @@
 import java.util.*;
 public class MyClass {
-    static int operations(int a[],int n){
+    static int operations(int n){
         if(n==0 || n==1)
         return 0;
         if(n==2 || n==3)
@@ -23,9 +23,6 @@ public class MyClass {
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
         int a[]=new int[n];
-        for(int i=0;i<n;i++){
-            a[i]=sc.nextInt();
-        }
-        System.out.print(operations(a,n));
+        System.out.print(operations(n));
     }
 }
