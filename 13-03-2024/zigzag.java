@@ -33,8 +33,8 @@ public class MyClass{
 	{
 	    if(root==null)
 	    return;
-	    Stack<Node> current;
-	    Stack<Node> next;
+	    Stack<Node> current=new Stack<>();
+	    Stack<Node> next=new Stack<>();
 	    current.push(root);
 	    boolean flag=true;
 	    while(!current.isEmpty()){
