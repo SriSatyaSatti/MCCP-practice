@@ -31,17 +31,24 @@ public class MyClass{
 	}
 	public static Node removehalf(Node root)
 	{
-	    if(root==null)
-	    return root;
-	    root.left=removehalf(root.left);
-	    root.right=removehalf(root.right);
-	    if(root.left!=null && root.right!=null)
-	    return root;
-	    if(root.left==null)
-	    return root.right;
-	    if(root.right==null)
-	    return root.left;
-        return root;
+	if(root == null) return root;
+        
+        Node leftNode = RemoveHalfNodes(root.left);
+        Node rightNode = RemoveHalfNodes(root.right);
+        
+        if(leftNode == null && rightNode == null) {
+            return root;
+        } else if(leftNode == null) {
+            root.right = rightNode;
+            return rightNode;
+        } else if(rightNode == null) {
+            root.left = leftNode;
+            return leftNode;
+        } else {
+            root.left = leftNode;
+            root.right = rightNode;
+            return root;
+        }
 	}
 		static void traversal(Node root)
 	{
