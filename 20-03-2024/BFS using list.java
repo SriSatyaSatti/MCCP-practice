@@ -20,7 +20,7 @@ public class HelloWorld {
         System.out.print("Enter 1 to continue");
         ch=sc.nextInt();
     }
-    DFS(h,n,r);
+    BFS(h,n,r);
 }
     static void BFS(HashMap<Integer,ArrayList<Integer>> h,int n,int v){
         Queue<Integer> q=new LinkedList<>();
