@@ -65,6 +65,23 @@ public class MyClass {
 	        }
 	    }
 	}
+
+// Floor
+	// int ans = -1;
+ //        Node temp = root;
+        
+ //        while(temp!=null){
+ //            if(temp.data<=x){
+ //                ans = temp.data;
+ //                temp = temp.right;
+ //            }
+ //            else{
+ //                temp = temp.left;
+ //            }
+ //        }
+ //        return ans;
+
+		
 	public static void main(String[] args) {
 		root=insert(root,20);
 		root=insert(root,10);
